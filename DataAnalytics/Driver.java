@@ -10,6 +10,7 @@ public class Driver {
 		DummyPredictor predictor = new DummyPredictor();
 		String token = "";
 		ArrayList<DataPoint> data = new ArrayList<DataPoint>();
+		data.add(new DataPoint());
 		try {
 			Scanner scanner = new Scanner(new File("text.txt"));
 			while (scanner.hasNextLine()) {
@@ -21,10 +22,10 @@ public class Driver {
 			System.out.println("File Not Found");
 		}
 		
-		//DataPoint testData = new DataPoint(9.0);
+		DataPoint testData = new DataPoint(1.0);
 		
-		//predictor.readData(data);
-		//System.out.println(predictor.test(testData)); // Should print "Blue"
+		predictor.readData(data);
+		System.out.println(predictor.test(testData)); 
 
 	}
 	}
